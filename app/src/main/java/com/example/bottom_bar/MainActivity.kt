@@ -135,7 +135,7 @@ paddingValues ->
         NavHost(navController = navigationController,
             startDestination = Screens.Home.screen,
            modifier=Modifier.padding(paddingValues) ){
-            composable(Screens.Home.screen){ Home() }
+            composable(Screens.Home.screen){ Home(navigationController) }
             composable(Screens.Notification.screen){ Notification() }
             composable(Screens.Profile.screen){ Profile() }
             composable(Screens.Settings.screen){ Settings() }
