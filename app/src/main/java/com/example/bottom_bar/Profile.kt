@@ -22,7 +22,7 @@ fun Profile(){
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally)
         {
-            Text(text = "this is profile page", fontSize = 30.sp, color = GreenJc)
+            Text(text = "this is profile page........", fontSize = 30.sp, color = GreenJc)
         }
     }
 }
