@@ -80,5 +80,5 @@ fun Home(navController: NavController){
             }
         }
     }
-}
 
+}

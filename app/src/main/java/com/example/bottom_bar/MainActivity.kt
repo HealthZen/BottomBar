@@ -142,6 +142,8 @@ paddingValues ->
             composable(Screens.Profile.screen){ Profile() }
             composable(Screens.Settings.screen){ Settings() }
             composable(Screens.Search.screen){ Search() }
+            composable(Screens.Education.screen){ Education(navigationController) }
+            composable(Screens.Video.screen){ Video(navigationController) }
         }
     }
 }
