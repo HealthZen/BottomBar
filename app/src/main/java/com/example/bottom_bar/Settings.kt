@@ -11,9 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 import com.example.bottom_bar.ui.theme.GreenJc
 
-
 @Composable
-fun Profile(){
+fun Settings(){
     Box(modifier= Modifier.fillMaxSize()){
         Column (
             modifier = Modifier
@@ -22,7 +21,8 @@ fun Profile(){
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally)
         {
-            Text(text = "this is profile page", fontSize = 30.sp, color = GreenJc)
+            Text(text = "it is Setting page ....", fontSize = 30.sp, color = GreenJc)
+
         }
     }
 }

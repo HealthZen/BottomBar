@@ -24,6 +24,7 @@ fun Home(){
         {
 Text(text = "it is Home page ....", fontSize = 30.sp, color = GreenJc)
 
+
         }
     }
 }

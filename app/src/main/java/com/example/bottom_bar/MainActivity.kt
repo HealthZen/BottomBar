@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -82,14 +83,14 @@ fun MyBottomAPPBar(){
               }
                 IconButton(
                     onClick = {
-                        selected.value=Icons.Default.Search
-                        navigationController.navigate(Screens.Search.screen){
+                        selected.value=Icons.Default.Notifications
+                        navigationController.navigate(Screens.Notification.screen){
                             popUpTo(0)
                         }
                     },
                     modifier=Modifier.weight(1f)){
-                    Icon(Icons.Default.Search, contentDescription =null, modifier = Modifier.size(26.dp),
-                        tint = if(selected.value==Icons.Default.Search) Color.White else Color.DarkGray)
+                    Icon(Icons.Default.Notifications, contentDescription =null, modifier = Modifier.size(26.dp),
+                        tint = if(selected.value==Icons.Default.Notifications) Color.White else Color.DarkGray)
 
                 }
                 Box(modifier= Modifier
@@ -101,18 +102,6 @@ fun MyBottomAPPBar(){
                     }
                 IconButton(
                     onClick = {
-                        selected.value=Icons.Default.Notifications
-                        navigationController.navigate(Screens.Notification.screen){
-                            popUpTo(0)
-                        }
-                    },
-                    modifier=Modifier.weight(1f)){
-                    Icon(Icons.Default.Notifications, contentDescription =null, modifier = Modifier.size(26.dp),
-                        tint = if(selected.value==Icons.Default.Notifications) Color.White else Color.DarkGray)
-
-                }
-                IconButton(
-                    onClick = {
                         selected.value=Icons.Default.Person
                         navigationController.navigate(Screens.Profile.screen){
                             popUpTo(0)
@@ -121,6 +110,18 @@ fun MyBottomAPPBar(){
                     modifier=Modifier.weight(1f)){
                     Icon(Icons.Default.Person, contentDescription =null, modifier = Modifier.size(26.dp),
                         tint = if(selected.value==Icons.Default.Person) Color.White else Color.DarkGray)
+
+                }
+                IconButton(
+                    onClick = {
+                        selected.value=Icons.Default.Settings
+                        navigationController.navigate(Screens.Settings.screen){
+                            popUpTo(0)
+                        }
+                    },
+                    modifier=Modifier.weight(1f)){
+                    Icon(Icons.Default.Settings, contentDescription =null, modifier = Modifier.size(26.dp),
+                        tint = if(selected.value==Icons.Default.Settings) Color.White else Color.DarkGray)
 
                 }
 
@@ -135,9 +136,10 @@ paddingValues ->
             startDestination = Screens.Home.screen,
            modifier=Modifier.padding(paddingValues) ){
             composable(Screens.Home.screen){ Home() }
-            composable(Screens.Search.screen){ Search() }
             composable(Screens.Notification.screen){ Notification() }
             composable(Screens.Profile.screen){ Profile() }
+            composable(Screens.Settings.screen){ Settings() }
+            composable(Screens.Search.screen){ Search() }
         }
     }
 }
